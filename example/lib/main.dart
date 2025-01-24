@@ -8,7 +8,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,6 +31,7 @@ class MyHomePage extends StatelessWidget {
         title: const Text('Confusion Matrix Heatmap'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           ConfusionMatrix(
             xAxis: const ['A', 'B', 'C'],
