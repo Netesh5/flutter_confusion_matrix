@@ -38,7 +38,7 @@ class MyHomePage extends StatelessWidget {
             yAxis: const ['A', 'B', 'C'],
             data: const [
               [100, 33, 5],
-              [20, 150, 400],
+              [20, 150, 70],
               [10, 30, 100],
             ],
             color: Colors.green,
