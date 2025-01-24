@@ -15,6 +15,7 @@ class ConfusionMatrix extends StatelessWidget {
     this.xAxisStyle,
     this.yAxisStyle,
     this.reverseColor = false,
+    this.padding,
   })  : assert(xAxis.length == data.length && yAxis.length == data.length,
             'The length of the X-axis and Y-axis labels must match the length of the data matrix.'),
         assert(xAxis.length == yAxis.length,
@@ -54,21 +55,26 @@ class ConfusionMatrix extends StatelessWidget {
 
   final bool reverseColor;
 
+  final EdgeInsetsGeometry? padding;
+
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
-      size: size ?? const Size(300, 300),
-      painter: ConfusionMatrixPainter(
-        xAxis: xAxis,
-        yAxis: yAxis,
-        data: data,
-        color: color,
-        cellWidth: cellWidth,
-        cellHeight: cellHeight,
-        backgroundOpacity: backgroundOpacity,
-        xAxisStyle: xAxisStyle,
-        yAxisStyle: yAxisStyle,
-        reverseColor: reverseColor,
+    return Padding(
+      padding: padding ?? const EdgeInsets.all(20.0),
+      child: CustomPaint(
+        size: size ?? const Size(300, 300),
+        painter: ConfusionMatrixPainter(
+          xAxis: xAxis,
+          yAxis: yAxis,
+          data: data,
+          color: color,
+          cellWidth: cellWidth,
+          cellHeight: cellHeight,
+          backgroundOpacity: backgroundOpacity,
+          xAxisStyle: xAxisStyle,
+          yAxisStyle: yAxisStyle,
+          reverseColor: reverseColor,
+        ),
       ),
     );
   }
