@@ -21,6 +21,7 @@ A Flutter package for creating and visualizing **Confusion Matrices** with a cus
 
 Add the package to your `pubspec.yaml` file:
 
+
 ```yaml
 dependencies:
   flutter_confusion_matrix: <latest_version>
@@ -65,4 +66,7 @@ dependencies:
 | `dividerColor`      | `Color`               | Color of the dividers between the cells.           | `Colors.white`      |
 
 
+
+## 🔗 Contributing
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to create an issue or submit a pull request.
 
