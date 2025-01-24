@@ -1,6 +1,6 @@
 name: flutter_confusion_matrix
 description: "Package for creating and visualizing Confusion Matrices with a customizable heatmap."
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/Netesh5/flutter_confusion_matrix/tree/main
 
 environment:
