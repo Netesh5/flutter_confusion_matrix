@@ -14,6 +14,8 @@ A Flutter package for creating and visualizing **Confusion Matrices** with a cus
 
 ---
 
+![Screenshot](https://github.com/[netesh5]/[flutter_confusion_matrix]/blob/[main]/ss.png?raw=true)
+
 ## 🚀 Installation
 
 Add the package to your `pubspec.yaml` file:
@@ -25,7 +27,6 @@ dependencies:
 
 
 ##  Usage
-
 ```
   ConfusionMatrix(
     xAxis: const ['A', 'B', 'C'],

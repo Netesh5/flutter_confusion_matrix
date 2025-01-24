@@ -28,25 +28,27 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Confusion Matrix Heatmap'),
+        title: const Text('Confusion Matrix'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ConfusionMatrix(
-            xAxis: const ['A', 'B', 'C'],
-            yAxis: const ['A', 'B', 'C'],
-            data: const [
-              [100, 33, 5],
-              [20, 150, 70],
-              [10, 30, 100],
-            ],
-            color: Colors.green,
-            cellWidth: 100,
-            cellHeight: 100,
-            backgroundOpacity: 3,
-            xAxisStyle: const TextStyle(color: Colors.black, fontSize: 16),
-            yAxisStyle: const TextStyle(color: Colors.black, fontSize: 16),
+          Center(
+            child: ConfusionMatrix(
+              xAxis: const ['A', 'B', 'C'],
+              yAxis: const ['A', 'B', 'C'],
+              data: const [
+                [100, 33, 5],
+                [20, 150, 70],
+                [10, 30, 100],
+              ],
+              color: Colors.green,
+              cellWidth: 100,
+              cellHeight: 100,
+              backgroundOpacity: 3,
+              xAxisStyle: const TextStyle(color: Colors.black, fontSize: 16),
+              yAxisStyle: const TextStyle(color: Colors.black, fontSize: 16),
+            ),
           ),
         ],
       ),
