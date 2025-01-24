@@ -37,6 +37,9 @@ class ConfusionMatrixPainter extends CustomPainter {
   /// A flag to reverse the color gradient of the heatmap.
   final bool reverseColor;
 
+  /// The color of the dividers between the cells.
+  final Color dividerColor;
+
   ConfusionMatrixPainter({
     required this.xAxis,
     required this.yAxis,
@@ -48,6 +51,7 @@ class ConfusionMatrixPainter extends CustomPainter {
     this.xAxisStyle,
     this.yAxisStyle,
     this.reverseColor = false,
+    this.dividerColor = Colors.white,
   });
 
   /// The main method responsible for rendering the heatmap onto the canvas.
@@ -73,7 +77,7 @@ class ConfusionMatrixPainter extends CustomPainter {
         canvas.drawRect(rect, paint);
 
         // Draw white dividers between the cells for better visual separation.
-        final Paint dividerPaint = Paint()..color = Colors.white;
+        final Paint dividerPaint = Paint()..color = dividerColor;
         canvas.drawLine(
           Offset((j + 1) * cellWidth, i * cellHeight),
           Offset((j + 1) * cellWidth, (i + 1) * cellHeight),

@@ -16,6 +16,7 @@ class ConfusionMatrix extends StatelessWidget {
     this.yAxisStyle,
     this.reverseColor = false,
     this.padding,
+    this.dividerColor = Colors.white,
   })  : assert(xAxis.length == data.length && yAxis.length == data.length,
             'The length of the X-axis and Y-axis labels must match the length of the data matrix.'),
         assert(xAxis.length == yAxis.length,
@@ -55,7 +56,11 @@ class ConfusionMatrix extends StatelessWidget {
 
   final bool reverseColor;
 
+  /// The padding around the heatmap.
   final EdgeInsetsGeometry? padding;
+
+  /// The color of the dividers between the cells.
+  final Color dividerColor;
 
   @override
   Widget build(BuildContext context) {
@@ -74,6 +79,7 @@ class ConfusionMatrix extends StatelessWidget {
           xAxisStyle: xAxisStyle,
           yAxisStyle: yAxisStyle,
           reverseColor: reverseColor,
+          dividerColor: dividerColor,
         ),
       ),
     );
