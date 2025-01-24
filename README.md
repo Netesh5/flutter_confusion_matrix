@@ -21,9 +21,9 @@ Add the package to your `pubspec.yaml` file:
 ```yaml
 dependencies:
   flutter_confusion_matrix: <latest_version>
+```
 
-  
-### 🎨 Customization Options
+## 🎨 Customization Options
 
 
 | Parameter           | Type                  | Description                                         | Default Value       |
