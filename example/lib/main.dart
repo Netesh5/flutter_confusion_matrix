@@ -32,7 +32,23 @@ class MyHomePage extends StatelessWidget {
         title: const Text('Confusion Matrix Heatmap'),
       ),
       body: const Column(
-        children: [],
+        children: [
+          ConfusionMatrix(
+            xAxis: ['A', 'B', 'C'],
+            yAxis: ['A', 'B', 'C'],
+            data: [
+              [10, 5, 3],
+              [2, 15, 4],
+              [1, 3, 20],
+            ],
+            color: Colors.blue,
+            cellWidth: 50,
+            cellHeight: 50,
+            backgroundOpacity: 3,
+            xAxisStyle: TextStyle(color: Colors.black, fontSize: 16),
+            yAxisStyle: TextStyle(color: Colors.black, fontSize: 16),
+          )
+        ],
       ),
     );
   }

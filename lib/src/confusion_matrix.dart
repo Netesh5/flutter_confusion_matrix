@@ -12,6 +12,8 @@ class ConfusionMatrix extends StatelessWidget {
     required this.cellWidth,
     this.size,
     this.backgroundOpacity = 3,
+    this.xAxisStyle,
+    this.yAxisStyle,
   });
   final Size? size;
 
@@ -35,6 +37,13 @@ class ConfusionMatrix extends StatelessWidget {
 
   /// The opacity factor used to adjust the base color for the background.
   final num backgroundOpacity;
+
+  /// The style for the X-axis labels.
+
+  final TextStyle? xAxisStyle;
+
+  /// The style for the Y-axis labels.
+  final TextStyle? yAxisStyle;
 
   @override
   Widget build(BuildContext context) {

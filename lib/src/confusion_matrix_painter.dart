@@ -12,6 +12,13 @@ class ConfusionMatrixPainter extends CustomPainter {
   /// The labels for the Y-axis (rows).
   final List<String> yAxis;
 
+  /// The style for the X-axis labels.
+
+  final TextStyle? xAxisStyle;
+
+  /// The style for the Y-axis labels.
+  final TextStyle? yAxisStyle;
+
   /// A 2D list representing the confusion matrix data (rows and columns).
   final List<List<num>> data;
 
@@ -35,6 +42,8 @@ class ConfusionMatrixPainter extends CustomPainter {
     required this.cellWidth,
     required this.cellHeight,
     this.backgroundOpacity = 3, // Default background opacity adjustment factor.
+    this.xAxisStyle,
+    this.yAxisStyle,
   });
 
   /// The main method responsible for rendering the heatmap onto the canvas.
@@ -93,6 +102,7 @@ class ConfusionMatrixPainter extends CustomPainter {
     for (int i = 0; i < xAxis.length; i++) {
       final TextSpan span = TextSpan(
         text: xAxis[i],
+        style: xAxisStyle ?? const TextStyle(color: Colors.black),
       );
       final TextPainter tp = TextPainter(
         text: span,
@@ -109,6 +119,7 @@ class ConfusionMatrixPainter extends CustomPainter {
     for (int j = 0; j < yAxis.length; j++) {
       final TextSpan span = TextSpan(
         text: yAxis[j],
+        style: yAxisStyle ?? const TextStyle(color: Colors.black),
       );
       final TextPainter tp = TextPainter(
         text: span,
