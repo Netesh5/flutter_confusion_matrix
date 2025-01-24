@@ -31,23 +31,25 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Confusion Matrix Heatmap'),
       ),
-      body: const Column(
+      body: Column(
         children: [
           ConfusionMatrix(
-            xAxis: ['A', 'B', 'C'],
-            yAxis: ['A', 'B', 'C'],
-            data: [
-              [10, 5, 3],
-              [2, 15, 4],
-              [1, 3, 20],
+            xAxis: const ['A', 'B', 'C'],
+            yAxis: const ['A', 'B', 'C'],
+            data: const [
+              [100, 33, 5],
+              [20, 150, 400],
+              [10, 30, 100],
             ],
-            color: Colors.blue,
+            color: Colors.green,
             cellWidth: 50,
             cellHeight: 50,
+            size: const Size(600, 600),
             backgroundOpacity: 3,
-            xAxisStyle: TextStyle(color: Colors.black, fontSize: 16),
-            yAxisStyle: TextStyle(color: Colors.black, fontSize: 16),
-          )
+            xAxisStyle: const TextStyle(color: Colors.black, fontSize: 16),
+            yAxisStyle: const TextStyle(color: Colors.black, fontSize: 16),
+            reverseColor: true,
+          ),
         ],
       ),
     );

@@ -14,7 +14,12 @@ class ConfusionMatrix extends StatelessWidget {
     this.backgroundOpacity = 3,
     this.xAxisStyle,
     this.yAxisStyle,
-  });
+    this.reverseColor = false,
+  })  : assert(xAxis.length == data.length && yAxis.length == data.length,
+            'The length of the X-axis and Y-axis labels must match the length of the data matrix.'),
+        assert(xAxis.length == yAxis.length,
+            'The length of the X-axis and Y-axis labels must match.'),
+        assert(backgroundOpacity != 0, 'backgroundOpacity should not be zero');
   final Size? size;
 
   /// The labels for the X-axis (columns).
@@ -45,6 +50,10 @@ class ConfusionMatrix extends StatelessWidget {
   /// The style for the Y-axis labels.
   final TextStyle? yAxisStyle;
 
+  /// A flag to reverse the color gradient of the heatmap.
+
+  final bool reverseColor;
+
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
@@ -57,6 +66,9 @@ class ConfusionMatrix extends StatelessWidget {
         cellWidth: cellWidth,
         cellHeight: cellHeight,
         backgroundOpacity: backgroundOpacity,
+        xAxisStyle: xAxisStyle,
+        yAxisStyle: yAxisStyle,
+        reverseColor: reverseColor,
       ),
     );
   }

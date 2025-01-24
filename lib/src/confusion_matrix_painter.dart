@@ -34,6 +34,9 @@ class ConfusionMatrixPainter extends CustomPainter {
   /// The opacity factor used to adjust the base color for the background.
   final num backgroundOpacity;
 
+  /// A flag to reverse the color gradient of the heatmap.
+  final bool reverseColor;
+
   ConfusionMatrixPainter({
     required this.xAxis,
     required this.yAxis,
@@ -44,6 +47,7 @@ class ConfusionMatrixPainter extends CustomPainter {
     this.backgroundOpacity = 3, // Default background opacity adjustment factor.
     this.xAxisStyle,
     this.yAxisStyle,
+    this.reverseColor = false,
   });
 
   /// The main method responsible for rendering the heatmap onto the canvas.
@@ -137,8 +141,8 @@ class ConfusionMatrixPainter extends CustomPainter {
   /// it between the base color and the provided color.
   Color getColor(num value) {
     List<num> result = minMax(data);
-    double minVal = result[0].toDouble();
-    double maxVal = result[1].toDouble();
+    double minVal = result[reverseColor ? 1 : 0].toDouble();
+    double maxVal = result[reverseColor ? 0 : 1].toDouble();
     double ratio = (value - minVal) / (maxVal - minVal);
 
     // Create a lighter background color based on the provided opacity factor.
