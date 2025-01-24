@@ -1,39 +1,24 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Flutter Confusion Matrix
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A Flutter package for creating and visualizing **Confusion Matrices** with a customizable heatmap. This package is ideal for machine learning and data analysis applications where a visual representation of prediction accuracy is required.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+---
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## 🌟 Features
 
-## Features
+- Customizable **heatmap colors** and cell dimensions.
+- Configurable **X-axis** and **Y-axis** labels.
+- Adjustable **background opacity** for enhanced visibility.
+- Customizable **divider colors** between cells.
+- Support for custom **text styles** for axis labels.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+---
 
-## Getting started
+## 🚀 Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add the package to your `pubspec.yaml` file:
 
-## Usage
+```yaml
+dependencies:
+  flutter_confusion_matrix: <latest_version>
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.

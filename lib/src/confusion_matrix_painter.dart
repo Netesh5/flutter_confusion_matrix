@@ -50,7 +50,7 @@ class ConfusionMatrixPainter extends CustomPainter {
     this.backgroundOpacity = 3, // Default background opacity adjustment factor.
     this.xAxisStyle,
     this.yAxisStyle,
-    this.reverseColor = false,
+    this.reverseColor = true,
     this.dividerColor = Colors.white,
   });
 

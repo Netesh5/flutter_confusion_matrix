@@ -47,7 +47,6 @@ class MyHomePage extends StatelessWidget {
             backgroundOpacity: 3,
             xAxisStyle: const TextStyle(color: Colors.black, fontSize: 16),
             yAxisStyle: const TextStyle(color: Colors.black, fontSize: 16),
-            reverseColor: true,
           ),
         ],
       ),

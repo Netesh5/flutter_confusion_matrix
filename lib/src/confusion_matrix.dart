@@ -14,7 +14,7 @@ class ConfusionMatrix extends StatelessWidget {
     this.backgroundOpacity = 3,
     this.xAxisStyle,
     this.yAxisStyle,
-    this.reverseColor = false,
+    this.reverseColor = true,
     this.padding,
     this.dividerColor = Colors.white,
   })  : assert(xAxis.length == data.length && yAxis.length == data.length,
