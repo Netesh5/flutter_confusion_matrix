@@ -4,7 +4,7 @@ version: 0.0.1
 repository: https://github.com/Netesh5/flutter_confusion_matrix/tree/main
 
 environment:
-  sdk: ^3.5.4
+  sdk: '>=3.2.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
